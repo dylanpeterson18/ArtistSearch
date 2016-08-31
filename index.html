@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Search Spotify</title>
+    <script src="./frontend/search.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./assets/stylesheets/application.css" media="screen" title="no title" charset="utf-8">
+    <link rel="icon"
+      type="image/png"
+      href="https://play.spotify.edgekey.net/site/3d4576f/images/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">Artist Search</h1>
+      <div class="logo">
+
+      </div>
+    </div>
+
+    <div class="search-container">
+      <!-- <div class="image-container">
+        <div class="background-image">
+          <div class="search-box">
+            <input type="text" class="search-field" placeholder="Artist Name ex. Taylor Swift, Eminem, etc.">
+            <button type="submit" class"submit-button">Submit</button>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="container">
+          <div id="search-form">
+            <form id="form">
+                <input type="text" id="query" value="" class="form-control"
+                placeholder="Who? i.e. Taylor Swift, Beatles, Eminem"/>
+                <input type="submit" id="search" class="search-button" value="Search" />
+            </form>
+          </div>
+      </div>
+      <div class="result-container">
+        <div id="results"></div>
+      </div>
+
+      <script id="results-template" type="text/x-handlebars-template">
+          {{#each albums.items}}
+          <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+          {{/each}}
+      </script>
+
+    </div>
+
+  </body>
+</html>
